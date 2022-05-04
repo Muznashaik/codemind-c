@@ -1,22 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int arr[100],d,max,i,n;
+    int n,d,k=0;
     scanf("%d",&n);
-    max=arr[0];
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    while(n)
+    while(n!=0)
     {
         d=n%10;
         n=n/10;
-        if(max<d)
+        if(k<d)
         {
-            max=d;
+            k=d;
         }
     }
-    printf("%d",max);
+    printf("%d",k);
     return 0;
 }
