@@ -1,15 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,sum=0,i;
+    int n,m=0,i,temp,d;
     scanf("%d",&n);
-    i=n;
+    temp=n;
     while(n!=0)
     {
-        r=n%10;//4 3 2
-        n=n/10;//123 12 1
-        sum=sum*10+r;//4 43 432 4321
+        d=n%10;
+        n=n/10;
+        if(d==0)
+        {
+            continue;
+        }
+        m=m*10+d;
     }
-    printf("%d",sum);
+    printf("%d",m);
     return 0;
 }
